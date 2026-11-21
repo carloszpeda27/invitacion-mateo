@@ -8,7 +8,13 @@
 <meta property="og:title" content="🎉 ¡Estás invitado al cumpleaños de Mateo! 🚗">
 <meta property="og:description" content="28 de noviembre · 2:30 PM · Toca para abrir tu invitación 🎈">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Cumpleaños de Mateo">
+<meta property="og:locale" content="es_MX">
+<meta name="theme-color" content="#030814">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%9A%97%3C/text%3E%3C/svg%3E">
 <meta property="og:image" content="https://invitacion-mateo-nine.vercel.app/preview.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="Invitación al cumpleaños de Mateo, 28 de noviembre, 2:30 PM">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="628">
 <meta property="og:url" content="https://invitacion-mateo-nine.vercel.app/">
@@ -16,7 +22,7 @@
 <meta name="twitter:image" content="https://invitacion-mateo-nine.vercel.app/preview.jpg">
 <style>
 :root{--bg:#030814;box-sizing:border-box}
-html,body{height:100%;margin:0;background:var(--bg);overflow:hidden}
+html,body{height:100%;margin:0;background:var(--bg);overflow:hidden;-webkit-text-size-adjust:100%;touch-action:manipulation;-webkit-user-select:none;user-select:none}
 body{display:flex;align-items:center;justify-content:center}
 .stage{position:relative;width:100vw;height:141vw;background:#000;overflow:hidden}
 video{width:100%;height:100%;display:block;object-fit:cover}
@@ -32,7 +38,7 @@ video{width:100%;height:100%;display:block;object-fit:cover}
 .hot.b{left:51.5%;width:43%}
 .hot:active{background:rgba(77,163,255,.25)}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(77,163,255,.0)}50%{box-shadow:0 0 18px 4px rgba(77,163,255,.55)}}
-.replay{position:absolute;top:calc(8px + env(safe-area-inset-top,0px));right:10px;background:rgba(0,0,0,.45);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 12px;font:12px system-ui,sans-serif;cursor:pointer;display:none}
+.replay{position:absolute;bottom:calc(6px + env(safe-area-inset-bottom,0px));right:10px;opacity:.75;background:rgba(0,0,0,.45);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 12px;font:12px system-ui,sans-serif;cursor:pointer;display:none}
 .ready .replay{display:block}
 .skip{position:absolute;top:8px;top:calc(8px + env(safe-area-inset-top,0px));right:10px;background:rgba(0,0,0,.5);color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:7px 14px;font:13px system-ui,sans-serif;cursor:pointer;z-index:5}
 .ready .skip{display:none}
@@ -84,7 +90,7 @@ function go(){
   started = false;
   try{ v.currentTime = 0; }catch(e){}
   var p = v.play(); if(p && p.catch) p.catch(fallback);
-  setTimeout(function(){ if(!started) fallback(); }, 3500);
+  setTimeout(function(){ if(!started) fallback(); }, 5000);
 }
 s.addEventListener("click", function(){ s.classList.add("hide"); go(); });
 document.getElementById("skip").addEventListener("click", function(){ try{ v.pause(); }catch(e){} s.classList.add("hide"); fallback(); });
